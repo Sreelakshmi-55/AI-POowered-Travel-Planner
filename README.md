@@ -1,4 +1,4 @@
-# AI-POowered-Travel-Planner
+# AI-Powered-Travel-Planner
 The AI-Powered Travel Planner is an intelligent travel assistant that generates personalized, structured travel itineraries based on user inputs such as destination, duration, budget, and interests.
 
 This project leverages:
