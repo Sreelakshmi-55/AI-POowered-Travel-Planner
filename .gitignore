@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# Vector Database
+faiss_index/
+
+# OS files
+.DS_Store
