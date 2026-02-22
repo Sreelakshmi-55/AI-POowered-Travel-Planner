@@ -1,7 +1,7 @@
 streamlit
-langchain
-langchain-openai
-faiss-cpu
 openai
+langchain
+chromadb
+sentence-transformers
 python-dotenv
-tiktoken
+requests
