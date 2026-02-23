@@ -1,10 +1,10 @@
 import os
 from dotenv import load_dotenv
-from openai import OpenAI
+from groq import Groq
 
 load_dotenv()
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 def generate_plan(destination, days, weather, context, budget, mood):
 
@@ -26,12 +26,27 @@ def generate_plan(destination, days, weather, context, budget, mood):
     - Adjust activities based on weather.
     - Suggest hotels and restaurants based on budget.
     - Align activities with travel mood.
-    - Provide detailed day-by-day itinerary.
+    - Provide a detailed day-by-day itinerary.
+    - Format output clearly using headings:
+      Day 1:
+      Morning:
+      Afternoon:
+      Evening:
+    - Keep response clean and structured.
+
     """
+    try:
+      response = client.chat.completions.create(
+        model="llama-3.1-8b-instant",
+        messages=[
+            {"role": "system", "content": "You are a professional travel planner."},
+            {"role": "user", "content": prompt}
+        ],
+        temperature=0.7,
+        max_tokens=800
+       )
 
-    response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[{"role": "user", "content": prompt}]
-    )
-
-    return response.choices[0].message.content
+      return response.choices[0].message.content
+    
+    except Exception as e:
+      return f"Error generating travel plan: {str(e)}"
