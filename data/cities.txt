@@ -1,19 +1,104 @@
-Paris is the capital of France. It is famous for the Eiffel Tower, Louvre Museum, Notre-Dame Cathedral, and Seine River cruises. 
-The best time to visit is April to June and September to November. 
-Local foods include croissants, baguettes, escargot, and French wine.
+This file contains structured travel knowledge for global cities.
 
-New York City is located in the USA. It is known for Times Square, Central Park, Statue of Liberty, and Broadway shows. 
-The best time to visit is April to June and September to early November. 
-Local foods include pizza, burgers, and cheesecakes.
+=== CITY: Paris ===
+Country: France
+Type: Cultural, Romantic, Historical
+Famous For: Eiffel Tower, Louvre Museum, Notre-Dame Cathedral, Seine River cruises
+Best Time To Visit: April to June, September to November
+Local Foods: Croissants, baguettes, escargot, French wine
 
-Tokyo is the capital of Japan. It is famous for Shibuya Crossing, Tokyo Tower, Senso-ji Temple, and anime culture. 
-The best time to visit is March to May and October to November. 
-Local foods include sushi, ramen, and tempura.
 
-Dubai is located in the UAE. It is famous for Burj Khalifa, desert safari, luxury shopping malls, and beaches. 
-The best time to visit is November to March. 
-Popular experiences include dune bashing and yacht cruises.
+=== CITY: New York City ===
+Country: USA
+Type: Urban, Entertainment, Cultural
+Famous For: Times Square, Central Park, Statue of Liberty, Broadway shows
+Best Time To Visit: April to June, September to early November
+Local Foods: Pizza, burgers, cheesecakes
 
-Rome is the capital of Italy. It is famous for the Colosseum, Roman Forum, Vatican City, and ancient architecture. 
-The best time to visit is April to June and September to October. 
-Local foods include pasta, pizza, and gelato.
+
+=== CITY: Tokyo ===
+Country: Japan
+Type: Cultural, Modern, Food
+Famous For: Shibuya Crossing, Tokyo Tower, Senso-ji Temple, anime culture
+Best Time To Visit: March to May, October to November
+Local Foods: Sushi, ramen, tempura
+
+
+=== CITY: Dubai ===
+Country: UAE
+Type: Luxury, Desert, Modern
+Famous For: Burj Khalifa, desert safari, luxury shopping malls, beaches
+Best Time To Visit: November to March
+Popular Experiences: Dune bashing, yacht cruises
+
+
+=== CITY: Rome ===
+Country: Italy
+Type: Historical, Cultural
+Famous For: Colosseum, Roman Forum, Vatican City, ancient architecture
+Best Time To Visit: April to June, September to October
+Local Foods: Pasta, pizza, gelato
+
+
+=== CITY: Mumbai ===
+Country: India
+Type: Urban, Coastal, Entertainment
+Famous For: Gateway of India, Marine Drive, Juhu Beach, Bollywood
+Best Time To Visit: November to February
+Local Foods: Vada pav, pav bhaji, seafood
+
+
+=== CITY: Delhi ===
+Country: India
+Type: Historical, Cultural, Urban
+Famous For: Red Fort, India Gate, Qutub Minar, Chandni Chowk
+Best Time To Visit: October to March
+Local Foods: Chole bhature, paratha, butter chicken
+
+
+=== CITY: Jaipur ===
+Country: India
+Type: Historical, Royal, Cultural
+Famous For: Hawa Mahal, Amer Fort, City Palace, Jal Mahal
+Best Time To Visit: October to March
+Local Foods: Dal baati churma, ghewar
+
+
+=== CITY: Goa ===
+Country: India
+Type: Beach, Relaxation, Nightlife
+Famous For: Baga Beach, Calangute Beach, Fort Aguada, nightlife
+Best Time To Visit: November to February
+Local Foods: Goan fish curry, prawn balchao, bebinca
+
+
+=== CITY: Bangalore ===
+Country: India
+Type: Urban, Tech, Garden City
+Famous For: Lalbagh Botanical Garden, Cubbon Park, Bangalore Palace
+Best Time To Visit: October to February
+Local Foods: Dosa, idli, filter coffee
+
+
+=== CITY: Kerala ===
+Country: India
+Type: Nature, Backwaters, Relaxation
+Famous For: Alleppey backwaters, Munnar hills, tea plantations, beaches
+Best Time To Visit: September to March
+Popular Experiences: Houseboat stay, Ayurvedic spa
+
+
+=== CITY: Varanasi ===
+Country: India
+Type: Spiritual, Cultural
+Famous For: Ganga Aarti, Kashi Vishwanath Temple, ghats of the Ganges
+Best Time To Visit: October to March
+Local Foods: Kachori sabzi, lassi, Banarasi paan
+
+
+=== CITY: Udaipur ===
+Country: India
+Type: Romantic, Royal, Lake City
+Famous For: City Palace, Lake Pichola, Jag Mandir
+Best Time To Visit: October to March
+Local Foods: Dal baati, gatte ki sabzi
