@@ -3,9 +3,29 @@ from rag import setup_rag, retrieve_context
 from weather import get_weather
 from llm import generate_plan
 
-st.set_page_config(page_title="AI Travel Planner", page_icon="🌍")
+st.set_page_config(page_title="AI Travel Planner", page_icon="🌍",layout="wide")
 
-st.title("🌍 AI Adaptive Travel Planner")
+st.markdown("""
+<div style='text-align: center; padding: 20px 0;'>
+    <h1>🌍 AI Adaptive Travel Planner</h1>
+    <p style='font-size:18px;'>Plan your perfect trip with real-time weather insights and AI-generated itineraries.</p>
+</div>
+""", unsafe_allow_html=True)
+st.markdown("""
+<style>
+    .stButton>button {
+        background-color: #ff4b4b;
+        color: white;
+        font-size: 18px;
+        border-radius: 10px;
+        padding: 10px 24px;
+    }
+            
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("---")
+
 
 @st.cache_resource
 def load_vectorstore():
@@ -13,21 +33,29 @@ def load_vectorstore():
 
 vectorstore = load_vectorstore()
 
-destination = st.text_input("Enter Destination")
+st.markdown("## ✈️ Plan Your Trip")
 
-days = st.number_input("Number of Days", min_value=1, max_value=14, value=3)
+col1, col2 = st.columns(2)
 
-budget = st.selectbox(
-    "Select Budget Level",
-    ["Low", "Medium", "High"]
-)
+with col1:
+    destination = st.text_input("📍 Enter Destination")
+    days = st.number_input("📅 Number of Days", min_value=1, max_value=14, value=3)
 
-mood = st.selectbox(
-    "Select Travel Mood",
-    ["Relaxing", "Adventure", "Romantic", "Family", "Solo"]
-)
+with col2:
+    budget = st.selectbox(
+        "💰 Select Budget Level",
+        ["Low", "Medium", "High"]
+    )
 
-if st.button("Generate Travel Plan"):
+    mood = st.selectbox(
+        "🎯 Select Travel Mood",
+        ["Relaxing", "Adventure", "Romantic", "Family", "Solo"]
+    )
+
+st.markdown("###")
+generate = st.button("✨ Generate Travel Plan")
+
+if generate:
 
     if not destination:
         st.warning("Please enter a destination.")
@@ -48,19 +76,27 @@ if st.button("Generate Travel Plan"):
                 mood
             )
 
-        st.subheader("Your Travel Itinerary")
-        st.write(plan)
+        st.markdown("---")
+        st.markdown("## 🗺️ Your Travel Plan")
+        colA, colB = st.columns([2, 1])
+        with colA:
+            st.markdown("### 📖 Itinerary")
+            st.markdown(plan)
+        with colB:
+            st.markdown("### 💰 Estimated Budget")
+            budget_costs = {
+             "Low": 60,
+             "Medium": 150,
+             "High": 350
+             }
+            estimated_cost = budget_costs[budget] * days
+            st.success(f"Approximate Total Cost: ${estimated_cost}")
+            st.markdown("### 🌤️ Weather Info")
+            st.info(weather)
 
-        budget_costs = {
-            "Low": 60,
-            "Medium": 150,
-            "High": 350
-        }
 
-        estimated_cost = budget_costs[budget] * days
 
-        st.subheader("Estimated Budget")
-        st.success(f"Approximate Total Cost: ${estimated_cost}")
 
-        st.subheader("Weather Info")
-        st.info(weather)
+
+
+
