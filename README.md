@@ -4,7 +4,7 @@ The AI-Powered Travel Planner is an intelligent travel assistant that generates 
 This project leverages:
 * Large Language Models (LLMs) for itinerary generation
 * Retrieval-Augmented Generation (RAG) for context-aware responses
-* Vector Databases for semantic search
+* Real-time weather data
 * Streamlit for user interaction
 
 The goal is to build a smart system that produces reliable, personalized, and data-grounded travel plans instead of generic recommendations.
@@ -18,15 +18,16 @@ To design and implement an intelligent travel planning system that integrates se
 ## Objectives
 
 * Generate personalized travel itineraries
-* Incorporate budget-aware recommendations
+* Incorporate weather-aware recommendations
 * Suggest attractions, accommodations, and cuisines
-* Use vector databases for semantic retrieval
+* Provide budget-based cost estimation
 * Reduce hallucination through Retrieval-Augmented Generation
 * Provide structured, day-wise travel planning
+* Optimize token usage for multi-day plans
 
 ## Problem Statement
 
-* Traditional travel platforms often:
+Traditional travel platforms often:
 * Provide generic recommendations
 * Lack structured day-wise planning
 * Require users to browse multiple websites
@@ -34,7 +35,11 @@ To design and implement an intelligent travel planning system that integrates se
 
 Additionally, standalone LLM-based systems may hallucinate travel details such as hotels or pricing.
 
-This project addresses these issues by implementing a RAG-based AI system that retrieves relevant travel data and generates grounded, personalized itineraries.
+This project addresses these issues by integrating:
+* Structured retrieval (RAG)
+* Real-time weather data
+* Controlled prompt engineering
+* Cost estimation logic
 
 ## Technologies Used
 
@@ -42,13 +47,17 @@ Programming Language: Python
 
 Frontend: Streamlit
 
-LLM: OpenAI GPT
+LLM: LLaMA 3.1 (via Groq API)
 
-Embedding Model: OpenAI / Sentence Transformers
+Retrieval System:
 
-Vector Database: FAISS
+* Structured text knowledge base (cities.txt)
 
-Framework: LangChain
+* Semantic retrieval logic
+
+External API: Weather API (real-time weather data)
+
+AI Technique: Retrieval-Augmented Generation (RAG)
 
 ## Conclusion
 
