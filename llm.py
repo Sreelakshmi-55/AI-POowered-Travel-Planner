@@ -23,10 +23,12 @@ def generate_plan(destination, days, weather, context, budget, mood):
     {context}
 
     Instructions:
+    - Generate exactly {days} days.
     - Adjust activities based on weather.
     - Suggest hotels and restaurants based on budget.
     - Align activities with travel mood.
     - Provide a detailed day-by-day itinerary.
+    - Do NOT add long explanations.
     - Format output clearly using headings:
       Day 1:
       Morning:
