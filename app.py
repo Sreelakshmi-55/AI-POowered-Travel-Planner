@@ -62,11 +62,15 @@ if generate:
     else:
 
         with st.spinner("Planning your trip..."):
-
+          try:
             weather = get_weather(destination)
-
+          except Exception:
+            weather = "Weather information unavailable."
+          try:
             context = retrieve_context(vectorstore, destination)
-
+          except Exception:
+            context = "No additional travel context available."
+          try:
             plan = generate_plan(
                 destination,
                 days,
@@ -75,7 +79,9 @@ if generate:
                 budget,
                 mood
             )
-
+          except Exception:
+             plan = "Unable to generate travel plan at the moment."
+             
         st.markdown("---")
         st.markdown("## 🗺️ Your Travel Plan")
         colA, colB = st.columns([2, 1])
